@@ -1,4 +1,8 @@
 describe("Login", () => {
+  beforeEach(() => {
+    cy.login();
+    cy.visit("");
+  });
   it.skip("should not work because of same-origin violation", () => {
     cy.visit("");
     cy.get("button").click();
@@ -10,14 +14,10 @@ describe("Login", () => {
     cy.get("p").should("contain.text", "Welcome");
   });
   it("should login", () => {
-    cy.login();
-    cy.visit("");
     cy.get("p").should("contain.text", "Welcome");
   });
 
-  it("should be not logged in", () => {
-    cy.login();
-    cy.visit("");
+  it("should also be logged in", () => {
     cy.get("p").should("contain.text", "Welcome");
   });
 });
