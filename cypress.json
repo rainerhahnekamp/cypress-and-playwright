@@ -1,0 +1,11 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "experimentalSessionSupport": true,
+  "env": {
+    "login": {
+      "username": "johndoe",
+      "password": "Fupu7043",
+      "headless": true
+    }
+  }
+}
